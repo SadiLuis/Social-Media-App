@@ -39,9 +39,16 @@ export default function Register() {
 
   return (
     <Center w="100%" h="100vh">
-      <Box mx="1" maxW="md" p="9" borderWidth="1px" borderRadius="lg">
-        <Heading mb="4" size="lg" textAlign="center">
-          Register
+      <Box mx="2" maxW="md" p="10" borderWidth="1px" borderRadius="lg">
+        <Heading mb="5" size="lg" textAlign="center">
+          <Text
+          bgGradient="linear(to-l,#63B3ED,#4FD1C5 )"
+          bgClip='text'
+          fontSize='5xl'
+          fontWeight='extrabold'
+          >
+            REGISTER
+          </Text>
         </Heading>
 
         <form onSubmit={handleSubmit(handleRegister)}>
@@ -78,11 +85,14 @@ export default function Register() {
             </FormErrorMessage>
           </FormControl>
           <Button
-            mt="4"
-            type="submit"
-            colorScheme="teal"
-            size="md"
-            w="full"
+          mt="4"
+          type="submit"
+          bgGradient='linear(to-r, cyan.500, teal.800)'
+          _hover={{
+            bgGradient: 'linear(to-r, teal.500, cyan.800)',
+          }}
+          size="md"
+          w="full"
             isLoading={isLoading}
             loadingText="Signing Up"
           >
@@ -95,14 +105,11 @@ export default function Register() {
           <Link
             as={RouterLink}
             to={LOGIN}
-            color="teal.800"
-            fontWeight="medium"
-            textDecor="underline"
-            _hover={{ background: "teal.100" }}
+            color="telegram.100"
+            fontWeight="bold"   
           >
-            Log In
-          </Link>{" "}
-          instead!
+            LogIn
+          </Link>
         </Text>
       </Box>
     </Center>

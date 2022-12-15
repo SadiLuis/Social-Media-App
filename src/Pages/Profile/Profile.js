@@ -8,7 +8,7 @@ import {
     useDisclosure,
   } from "@chakra-ui/react";
   import PostsList from "../../Components/Post/PostList";
-  import { usePosts } from "../../Hooks/Post";
+  import { usePosts, useToggleLike } from "../../Hooks/Post";
   import { useUser } from "../../Hooks/Users";
   import { useParams } from "react-router-dom";
   import ProfileAvatar from "./ProfilePhoto";
@@ -50,7 +50,7 @@ import {
                 Posts: {posts?.length}
               </Text>
               <Text color="gray.700" fontSize={["sm", "lg"]}>
-                Likes: todo!
+                Likes:{useToggleLike?.length}
               </Text>
               <Text color="gray.700" fontSize={["sm", "lg"]}>
                 Joined: {format(user.date, "MMMM YYY")}
